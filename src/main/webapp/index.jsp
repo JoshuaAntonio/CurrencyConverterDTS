@@ -60,7 +60,7 @@ app.controller('ctrl',function($scope,$http){
     
     $scope.currencyIndexTo = currency2;
     $scope.change = function(){	
-        $http.get('http://api.fixer.io/latest?base='+$scope.currencyIndex).then(function(res){
+        $http.get('http://data.fixer.io/api/latest?access_key=ea51323697f3326f0ddcfb862acd62a4?base='+$scope.currencyIndex).then(function(res){
         	var ratess = $scope.currencyIndexTo;
             if($scope.currencyIndex == $scope.currencyIndexTo)
                 $scope.valueINR = parseFloat($scope.amount);
